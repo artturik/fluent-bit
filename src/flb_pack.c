@@ -1185,6 +1185,8 @@ flb_sds_t flb_msgpack_to_gelf(flb_sds_t *s, msgpack_object *o,
                 key = (char *) k->via.bin.ptr;
                 key_len = k->via.bin.size;
             }
+	    flb_error("[flb_msgpack_to_gelf] test");
+	    flb_error("flb_msgpack_to_gelf] key %s", key)
 
             if ((key_len == host_key_len) &&
                 !strncmp(key, host_key, host_key_len)) {
